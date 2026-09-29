@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1100" viewBox="0 0 900 1100">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#c1694f"/>
+      <stop offset="100%" stop-color="#8a4a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1100" fill="url(#g)"/>
+  <rect x="24" y="24" width="852" height="1052" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="2" stroke-dasharray="10 10"/>
+  <text x="450" y="520" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#ffffff" text-anchor="middle" opacity="0.92">HERO PHOTO</text>
+  <text x="450" y="566" font-family="Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" opacity="0.75">Cerys & Gareth — portrait, 900x1100 or similar</text>
+</svg>
