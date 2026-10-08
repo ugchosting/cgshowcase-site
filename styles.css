@@ -1165,6 +1165,40 @@ h1, h2, h3, h4 {
   max-width: 265px;
 }
 
+/* Direct Response — centre the cards instead of leaving them
+   left-shifted in an otherwise-empty 4-column grid row. */
+#product-ugc .tab-grid[data-panel="direct-response"] {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#product-ugc .tab-grid[data-panel="direct-response"][hidden] {
+  display: none;
+}
+
+#product-ugc .tab-grid[data-panel="direct-response"] .media-card {
+  flex: 0 1 265px;
+  max-width: 265px;
+}
+
+/* Couples — centre the cards instead of leaving them
+   left-shifted in an otherwise-empty 4-column grid row. */
+#product-ugc .tab-grid[data-panel="couples"] {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#product-ugc .tab-grid[data-panel="couples"][hidden] {
+  display: none;
+}
+
+#product-ugc .tab-grid[data-panel="couples"] .media-card {
+  flex: 0 1 265px;
+  max-width: 265px;
+}
+
 /* Rates */
 .rates-grid {
   display: grid;
