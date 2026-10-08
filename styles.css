@@ -687,6 +687,7 @@ h1, h2, h3, h4 {
 
 .media-card-title {
   display: flex;
+  flex: 1 0 auto;
   align-items: flex-end;
   justify-content: center;
   min-height: 2.6em;
@@ -1131,73 +1132,31 @@ h1, h2, h3, h4 {
   background: transparent;
 }
 
-/* Skits — only ever two videos, so centre them instead of leaving them
-   left-shifted in an otherwise-empty 4-column grid row. */
-#product-ugc .tab-grid[data-panel="skits"] {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-#product-ugc .tab-grid[data-panel="skits"][hidden] {
-  display: none;
-}
-
-#product-ugc .tab-grid[data-panel="skits"] .media-card {
-  flex: 0 1 265px;
-  max-width: 265px;
-}
-
-/* Lifestyle-Integrated — now three videos, so centre them instead of
-   leaving them left-shifted in an otherwise-empty 4-column grid row. */
-#product-ugc .tab-grid[data-panel="lifestyle-integrated"] {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-#product-ugc .tab-grid[data-panel="lifestyle-integrated"][hidden] {
-  display: none;
-}
-
-#product-ugc .tab-grid[data-panel="lifestyle-integrated"] .media-card {
-  flex: 0 1 265px;
-  max-width: 265px;
-}
-
-/* Direct Response — centre the cards instead of leaving them
-   left-shifted in an otherwise-empty 4-column grid row. */
-#product-ugc .tab-grid[data-panel="direct-response"] {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-#product-ugc .tab-grid[data-panel="direct-response"][hidden] {
-  display: none;
-}
-
-#product-ugc .tab-grid[data-panel="direct-response"] .media-card {
-  flex: 0 1 265px;
-  max-width: 265px;
-}
-
-/* Couples — centre the cards instead of leaving them
-   left-shifted in an otherwise-empty 4-column grid row. */
+/* Skits & Couples — fewer than four videos, so centre them instead of
+   leaving them left-shifted in an otherwise-empty 4-column grid row.
+   Card width matches the Fun Edits grid's column width exactly at every
+   breakpoint (same calc as the base .tab-grid's repeat(4/2,1fr) + gap),
+   so sizing is identical to the full-grid panels, just centered. */
+#product-ugc .tab-grid[data-panel="skits"],
 #product-ugc .tab-grid[data-panel="couples"] {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
+#product-ugc .tab-grid[data-panel="skits"][hidden],
 #product-ugc .tab-grid[data-panel="couples"][hidden] {
   display: none;
 }
 
+#product-ugc .tab-grid[data-panel="skits"] .media-card,
 #product-ugc .tab-grid[data-panel="couples"] .media-card {
-  flex: 0 1 265px;
-  max-width: 265px;
+  flex: 0 1 calc(25% - 18px);
+  max-width: calc(25% - 18px);
 }
+
+
+
 
 /* Rates */
 .rates-grid {
@@ -1471,6 +1430,12 @@ h1, h2, h3, h4 {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  #product-ugc .tab-grid[data-panel="skits"] .media-card,
+  #product-ugc .tab-grid[data-panel="couples"] .media-card {
+    flex-basis: calc(50% - 12px);
+    max-width: calc(50% - 12px);
+  }
+
   .photo-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1576,6 +1541,12 @@ h1, h2, h3, h4 {
   .tab-grid {
     grid-template-columns: 1fr 1fr;
     gap: 18px;
+  }
+
+  #product-ugc .tab-grid[data-panel="skits"] .media-card,
+  #product-ugc .tab-grid[data-panel="couples"] .media-card {
+    flex-basis: calc(50% - 9px);
+    max-width: calc(50% - 9px);
   }
 
   .tab-panel-box {
